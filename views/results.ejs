@@ -1,4 +1,4 @@
-<h1>Results</h1>
+<h1>Photo Search Results</h1>
 
 <html>
 
@@ -34,7 +34,7 @@
 
 
 <div class="gallery">
-    <% data["photos"]["photo"].forEach(function(photo, i){ %>
+    <% data["photos"]["photo"].forEach(function(photo){ %>
 
         <%
             var id =  photo["id"]
@@ -42,9 +42,8 @@
             var secret = photo["secret"]
             var server = photo["server"]
 
-        %>
-            <%var url = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_q.jpg"; %>
-            <%var url2 = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_b.jpg"; %>
+            var url = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_q.jpg";
+            var url2 = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_b.jpg"; %>
 
         <a href= <%=url2%>><img src=<%=url%>></a>
 
