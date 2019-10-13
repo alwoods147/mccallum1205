@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 
 
-/* GET users listing. */
+/* Search Route */
 router.get('/', function(req, res, next) {
     res.render("search")
 });
